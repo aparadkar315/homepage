@@ -10,12 +10,13 @@
   justify-self: center;
   justify-content: center;
   align-items: center;
-  width: 320px;
+  width: 100vw;
   position: relative;
 }
 
 header {
   width: 100%;
+  position: relative;
 }
 
 .blue {
@@ -27,7 +28,7 @@ header {
 .name {
   max-width: 100%;
   position: absolute;
-  top: 265px;
+  top: 255px;
   color: rgb(255, 255, 255);
   z-index: 999;
   font-size: 40px;
@@ -35,25 +36,24 @@ header {
   padding: 0px 50px;
 }
 
-.imageContainerOne {
-  display: flex;
-  width: 100%;
-  height: 350px;
-  justify-content: center;
-  background-image: url(./Images&Icons/pexels-jonathanborba-13450811\ \(3\).jpg);
-  background-position: center;
-  background-size: 90% 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 10px;
-}
-
 .aboutMe {
   display: flex;
   gap: 8px;
   flex-direction: column;
-  padding: 30px 10px;
+  padding: 10px;
   align-items: center;
+  position: absolute;
+  top: 10px;
+  background-color: transparent;
+}
+
+.wrappedImage {
+  width: 90%;
+  height: 330px;
+}
+
+.aboutMeHeading {
+  margin-top: 10px;
 }
 
 .aboutMeContent {
@@ -71,6 +71,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 200px;
 }
 
 .myWorkProjectsContainer {
@@ -88,6 +89,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.imageContainerOne {
+  width: 100%;
+}
+
+.imageContainerOne > img {
+  width: 100%;
 }
 
 .projectInfo {
@@ -164,4 +173,55 @@ footer {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.wrappedImage {
+  float: left;
+}
+
+@media (min-width: 480px) {
+  #container {
+    width: 80vw;
+  }
+
+  .blue {
+    height: 430px;
+    background-color: rgb(38, 126, 177);
+    transform: skewY(-0.2rad) translateY(-35%);
+  }
+
+  .name {
+    max-width: 60%;
+    top: 45px;
+    right: 40px;
+    padding: 0;
+    flex-wrap: nowrap;
+  }
+
+  .aboutMe {
+    display: flex;
+    position: absolute;
+    top: 100px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    gap: 8px;
+    z-index: 200;
+    background-color: rgb(255, 255, 255);
+    margin: 0 50px;
+  }
+
+  .aboutMeContent {
+    color: rgb(81, 82, 85);
+    padding: 0 10px 10px 10px;
+  }
+
+  .aboutMeLinks {
+    display: flex;
+    gap: 20px;
+  }
+
+  .wrappedImage {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
 }
