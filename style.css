@@ -50,6 +50,7 @@ header {
 .wrappedImage {
   width: 90%;
   height: 330px;
+  float: left;
 }
 
 .aboutMeHeading {
@@ -72,6 +73,7 @@ main {
   align-items: center;
   justify-content: center;
   margin-top: 200px;
+  width: 100%;
 }
 
 .myWorkProjectsContainer {
@@ -129,6 +131,8 @@ footer {
   background-color: rgb(38, 126, 177);
   margin-top: 20px;
   color: rgb(255, 255, 255);
+  width: 100%;
+  position: relative;
 }
 
 .contactMe {
@@ -175,13 +179,13 @@ footer {
   background-repeat: no-repeat;
 }
 
-.wrappedImage {
-  float: left;
-}
-
 @media (min-width: 480px) {
   #container {
-    width: 80vw;
+    width: minmax(384px, 80vw);
+  }
+
+  header {
+    width: 100%;
   }
 
   .blue {
@@ -229,16 +233,54 @@ footer {
   }
 
   main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin-top: 20px;
+    margin-left: 35px;
   }
 
   .myWorkHeading {
     display: flex;
-    align-self: start;
-    margin-left: 7%;
+    align-self: flex-start;
+    margin-bottom: 5px;
+    margin-left: 9vw;
+  }
+
+  .myWorkProjectsContainer {
+    display: grid;
+    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(2, min(300px, 40%));
+    gap: 30px;
+    width: 100%;
+  }
+
+  .myWorkProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: row;
+  }
+
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 15px;
+    align-items: start;
+  }
+
+  .contactMe {
+    padding-left: 15px;
+  }
+
+  .linksContainer {
+    padding-left: 15px;
+  }
+
+  .imageContainerTwo {
+    transform: scale(0.75, 0.88);
+    height: 450px;
   }
 }
