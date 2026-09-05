@@ -249,7 +249,7 @@ footer {
   .myWorkProjectsContainer {
     display: grid;
     grid-template-rows: repeat(3, 300px);
-    grid-template-columns: repeat(auto-fit, minmax(250px, 30%));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 30%));
     gap: 30px;
     width: 100%;
   }
@@ -343,7 +343,7 @@ footer {
   }
 
   .myWorkProjectsContainer {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 30%));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 30%));
   }
 
   footer {
